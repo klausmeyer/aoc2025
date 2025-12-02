@@ -42,7 +42,7 @@ func ReadSequence(filename string) []rotation {
 
 	file, err := os.Open(filename)
 	if err != nil {
-		log.Fatalf("failed to open file: %s", err)
+		panic(err)
 	}
 	defer file.Close()
 
